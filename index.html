@@ -2,10 +2,16 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>融合新闻</title>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="keywords"
+        content="jQuery.slideshow, slideshow Plugin, jquery slideshow plugin, simple plugin, easy slideshow, slideshow callback, jquery gallery, javascript slideshow" />
+    <meta name="robots" content="index, follow" />
+    <link rel="stylesheet" href="css/swiper.css">
+    <link rel="stylesheet" href="css/slideshow.css">
+    <!-- <link rel="stylesheet" href="css/main.css"> -->
+    <script type="text/javascript" src="js/jquery-1.4.2.min.js"></script>
+    <script type="text/javascript" src="js/jquery.slideshow.js"></script>
     <style>
         html,
         body,
@@ -36,9 +42,12 @@
         }
 
         #container {
-            width: 700px;
+
             position: relative;
-            margin: 0 auto;
+            margin-left: 0;
+            margin-top: 150px;
+            text-align: left;
+            max-width: 800px;
         }
 
 
@@ -104,6 +113,39 @@
             padding-left: 15px;
             font-size: 14px;
         }
+
+        .swiper-container {
+            width: 1000px;
+            height: auto;
+        }
+
+        .swiper-button-next {
+            width: 150px;
+            height: 100px;
+            float: right;
+            background-color: #444;
+            color: white;
+            display: block;
+            background-image: none;
+            right: 0;
+
+        }
+
+        #navright {
+            position: absolute;
+            right: 100px;
+            top: 1200px;
+            background-color: #444;
+            display: block;
+            width: 150px;
+            height: 600px;
+        }
+
+        .videoaside {
+            float: right;
+            margin: 10px 20px;
+            width: 150px;
+        }
     </style>
 </head>
 
@@ -127,59 +169,226 @@
         </div>
 
     </div>
-    <div id="container">
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim molestiae culpa ab placeat id perferendis
-            eligendi hic, quod, mollitia expedita reprehenderit magni, ex amet quo excepturi corrupti sit. Maxime,
-            sapiente!</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim molestiae culpa ab placeat id perferendis
-            eligendi hic, quod, mollitia expedita reprehenderit magni, ex amet quo excepturi corrupti sit. Maxime,
-            sapiente!</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim molestiae culpa ab placeat id perferendis
-            eligendi hic, quod, mollitia expedita reprehenderit magni, ex amet quo excepturi corrupti sit. Maxime,
-            sapiente!</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim molestiae culpa ab placeat id perferendis
-            eligendi hic, quod, mollitia expedita reprehenderit magni, ex amet quo excepturi corrupti sit. Maxime,
-            sapiente!</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim molestiae culpa ab placeat id perferendis
-            eligendi hic, quod, mollitia expedita reprehenderit magni, ex amet quo excepturi corrupti sit. Maxime,
-            sapiente!</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim molestiae culpa ab placeat id perferendis
-            eligendi hic, quod, mollitia expedita reprehenderit magni, ex amet quo excepturi corrupti sit. Maxime,
-            sapiente!</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim molestiae culpa ab placeat id perferendis
-            eligendi hic, quod, mollitia expedita reprehenderit magni, ex amet quo excepturi corrupti sit. Maxime,
-            sapiente!</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim molestiae culpa ab placeat id perferendis
-            eligendi hic, quod, mollitia expedita reprehenderit magni, ex amet quo excepturi corrupti sit. Maxime,
-            sapiente!</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim molestiae culpa ab placeat id perferendis
-            eligendi hic, quod, mollitia expedita reprehenderit magni, ex amet quo excepturi corrupti sit. Maxime,
-            sapiente!</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim molestiae culpa ab placeat id perferendis
-            eligendi hic, quod, mollitia expedita reprehenderit magni, ex amet quo excepturi corrupti sit. Maxime,
-            sapiente!</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim molestiae culpa ab placeat id perferendis
-            eligendi hic, quod, mollitia expedita reprehenderit magni, ex amet quo excepturi corrupti sit. Maxime,
-            sapiente!</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim molestiae culpa ab placeat id perferendis
-            eligendi hic, quod, mollitia expedita reprehenderit magni, ex amet quo excepturi corrupti sit. Maxime,
-            sapiente!</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim molestiae culpa ab placeat id perferendis
-            eligendi hic, quod, mollitia expedita reprehenderit magni, ex amet quo excepturi corrupti sit. Maxime,
-            sapiente!</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim molestiae culpa ab placeat id perferendis
-            eligendi hic, quod, mollitia expedita reprehenderit magni, ex amet quo excepturi corrupti sit. Maxime,
-            sapiente!</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim molestiae culpa ab placeat id perferendis
-            eligendi hic, quod, mollitia expedita reprehenderit magni, ex amet quo excepturi corrupti sit. Maxime,
-            sapiente!</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim molestiae culpa ab placeat id perferendis
-            eligendi hic, quod, mollitia expedita reprehenderit magni, ex amet quo excepturi corrupti sit. Maxime,
-            sapiente!</p>
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <div id="container">
+                    <p>part1</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim molestiae culpa ab placeat id
+                        perferendis
+                        eligendi hic, quod, mollitia expedita reprehenderit magni, ex amet quo excepturi corrupti sit.
+                        Maxime,
+                        sapiente!</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim molestiae culpa ab placeat id
+                        perferendis
+                        eligendi hic, quod, mollitia expedita reprehenderit magni, ex amet quo excepturi corrupti sit.
+                        Maxime,
+                        sapiente!</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim molestiae culpa ab placeat id
+                        perferendis
+                        eligendi hic, quod, mollitia expedita reprehenderit magni, ex amet quo excepturi corrupti sit.
+                        Maxime,
+                        sapiente!</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim molestiae culpa ab placeat id
+                        perferendis
+                        eligendi hic, quod, mollitia expedita reprehenderit magni, ex amet quo excepturi corrupti sit.
+                        Maxime,
+                        sapiente!</p>
+                    </div>
+                    <div id="app">
+                        <div class="slideShow">
+                            <ol class="slides">
+                                <li class="slide"><img src="image/test11.jpg" border="0" alt="" /></li>
+                                <li class="slide"><img src="image/test22.jpg" border="0" alt="" /></li>
+                            </ol>
+                            <ol class="navigation thumbs clearfix">
+                                <li><a href="javascript:void(0);" class="page"><img src="image/test11t.jpg" border="0"
+                                            alt="" /></a></li>
+                                <li><a href="javascript:void(0);" class="page"><img src="image/test22t.jpg" border="0"
+                                            alt="" /></a></li>
+
+                            </ol>
+                        </div>
+
+                        <script type="text/javascript">
+                            $(document).ready(function () {
+                                $('.slideShow').slideShow({
+                                    interval: 3
+                                });
+                            });
+                        </script>
+                    </div>
+                    <div id="container">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim molestiae culpa ab placeat id
+                        perferendis
+                        eligendi hic, quod, mollitia expedita reprehenderit magni, ex amet quo excepturi corrupti sit.
+                        Maxime,
+                        sapiente!</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim molestiae culpa ab placeat id
+                        perferendis
+                        eligendi hic, quod, mollitia expedita reprehenderit magni, ex amet quo excepturi corrupti sit.
+                        Maxime,
+                        sapiente!</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim molestiae culpa ab placeat id
+                        perferendis
+                        eligendi hic, quod, mollitia expedita reprehenderit magni, ex amet quo excepturi corrupti sit.
+                        Maxime,
+                        sapiente!</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim molestiae culpa ab placeat id
+                        perferendis
+                        eligendi hic, quod, mollitia expedita reprehenderit magni, ex amet quo excepturi corrupti sit.
+                        Maxime,
+                        sapiente!</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim molestiae culpa ab placeat id
+                        perferendis
+                        eligendi hic, quod, mollitia expedita reprehenderit magni, ex amet quo excepturi corrupti sit.
+                        Maxime,
+                        sapiente!</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim molestiae culpa ab placeat id
+                        perferendis
+                        eligendi hic, quod, mollitia expedita reprehenderit magni, ex amet quo excepturi corrupti sit.
+                        Maxime,
+                        sapiente!</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim molestiae culpa ab placeat id
+                        perferendis
+                        eligendi hic, quod, mollitia expedita reprehenderit magni, ex amet quo excepturi corrupti sit.
+                        Maxime,
+                        sapiente!</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim molestiae culpa ab placeat id
+                        perferendis
+                        eligendi hic, quod, mollitia expedita reprehenderit magni, ex amet quo excepturi corrupti sit.
+                        Maxime,
+                        sapiente!</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim molestiae culpa ab placeat id
+                        perferendis
+                        eligendi hic, quod, mollitia expedita reprehenderit magni, ex amet quo excepturi corrupti sit.
+                        Maxime,
+                        sapiente!</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim molestiae culpa ab placeat id
+                        perferendis
+                        eligendi hic, quod, mollitia expedita reprehenderit magni, ex amet quo excepturi corrupti sit.
+                        Maxime,
+                        sapiente!</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim molestiae culpa ab placeat id
+                        perferendis
+                        eligendi hic, quod, mollitia expedita reprehenderit magni, ex amet quo excepturi corrupti sit.
+                        Maxime,
+                        sapiente!</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim molestiae culpa ab placeat id
+                        perferendis
+                        eligendi hic, quod, mollitia expedita reprehenderit magni, ex amet quo excepturi corrupti sit.
+                        Maxime,
+                        sapiente!</p>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div id="container">
+                    <p>part2</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim molestiae culpa ab placeat id
+                        perferendis
+                        eligendi hic, quod, mollitia expedita reprehenderit magni, ex amet quo excepturi corrupti sit.
+                        Maxime,
+                        sapiente!</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim molestiae culpa ab placeat id
+                        perferendis
+                        eligendi hic, quod, mollitia expedita reprehenderit magni, ex amet quo excepturi corrupti sit.
+                        Maxime,
+                        sapiente!</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim molestiae culpa ab placeat id
+                        perferendis
+                        eligendi hic, quod, mollitia expedita reprehenderit magni, ex amet quo excepturi corrupti sit.
+                        Maxime,
+                        sapiente!</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim molestiae culpa ab placeat id
+                        perferendis
+                        eligendi hic, quod, mollitia expedita reprehenderit magni, ex amet quo excepturi corrupti sit.
+                        Maxime,
+                        sapiente!</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim molestiae culpa ab placeat id
+                        perferendis
+                        eligendi hic, quod, mollitia expedita reprehenderit magni, ex amet quo excepturi corrupti sit.
+                        Maxime,
+                        sapiente!</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim molestiae culpa ab placeat id
+                        perferendis
+                        eligendi hic, quod, mollitia expedita reprehenderit magni, ex amet quo excepturi corrupti sit.
+                        Maxime,
+                        sapiente!</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim molestiae culpa ab placeat id
+                        perferendis
+                        eligendi hic, quod, mollitia expedita reprehenderit magni, ex amet quo excepturi corrupti sit.
+                        Maxime,
+                        sapiente!</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim molestiae culpa ab placeat id
+                        perferendis
+                        eligendi hic, quod, mollitia expedita reprehenderit magni, ex amet quo excepturi corrupti sit.
+                        Maxime,
+                        sapiente!</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim molestiae culpa ab placeat id
+                        perferendis
+                        eligendi hic, quod, mollitia expedita reprehenderit magni, ex amet quo excepturi corrupti sit.
+                        Maxime,
+                        sapiente!</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim molestiae culpa ab placeat id
+                        perferendis
+                        eligendi hic, quod, mollitia expedita reprehenderit magni, ex amet quo excepturi corrupti sit.
+                        Maxime,
+                        sapiente!</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim molestiae culpa ab placeat id
+                        perferendis
+                        eligendi hic, quod, mollitia expedita reprehenderit magni, ex amet quo excepturi corrupti sit.
+                        Maxime,
+                        sapiente!</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim molestiae culpa ab placeat id
+                        perferendis
+                        eligendi hic, quod, mollitia expedita reprehenderit magni, ex amet quo excepturi corrupti sit.
+                        Maxime,
+                        sapiente!</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim molestiae culpa ab placeat id
+                        perferendis
+                        eligendi hic, quod, mollitia expedita reprehenderit magni, ex amet quo excepturi corrupti sit.
+                        Maxime,
+                        sapiente!</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim molestiae culpa ab placeat id
+                        perferendis
+                        eligendi hic, quod, mollitia expedita reprehenderit magni, ex amet quo excepturi corrupti sit.
+                        Maxime,
+                        sapiente!</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim molestiae culpa ab placeat id
+                        perferendis
+                        eligendi hic, quod, mollitia expedita reprehenderit magni, ex amet quo excepturi corrupti sit.
+                        Maxime,
+                        sapiente!</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim molestiae culpa ab placeat id
+                        perferendis
+                        eligendi hic, quod, mollitia expedita reprehenderit magni, ex amet quo excepturi corrupti sit.
+                        Maxime,
+                        sapiente!</p>
+                </div>
+            </div>
+
+        </div>
+        <!-- 如果需要分页器 -->
+        <!-- <div class="swiper-pagination"></div> -->
+
+        <!-- 如果需要导航按钮 -->
+        <!-- <div class="swiper-button-prev"></div> -->
+
+
+        <!-- 如果需要滚动条 -->
+        <!-- <div class="swiper-scrollbar"></div> -->
     </div>
-    <script src="js/jquery-3.3.1.js"></script>
+
+    <div id="navright">
+        <div class="swiper-button-next">点我翻页</div>
+    </div>
+
+
+    <script src="js/swiper.js"></script>
+    <!-- <script src="js/jquery-3.3.1.js"></script> -->
     <script src="js/ScrollMagic.js"></script>
     <script src="js/debug.addIndicators.js"></script>
+
     <script type="text/javascript">
         var winHeight;
         var winScrollDistance;
@@ -190,6 +399,7 @@
             winHeight = $(window).height();
             beginning = $("#beginning").offset().top;
             var controller = new ScrollMagic.Controller();
+
         })
 
         window.addEventListener("scroll", function () {
@@ -202,10 +412,49 @@
         })
 
     </script>
-     <script src="js/aos.js"></script>
-     <script>
-         AOS.init();
-     </script>
+    <script src="js/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <script>
+        var mySwiper = new Swiper('.swiper-container', {
+            direction: 'horizontal', // 垂直切换选项
+            loop: true, // 循环模式选项
+
+            // 如果需要分页器
+            pagination: {
+                el: '.swiper-pagination',
+            },
+
+            // 如果需要前进后退按钮
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+
+            // 如果需要滚动条
+            scrollbar: {
+                el: '.swiper-scrollbar',
+            },
+        })        
+    </script>
+
+    <script>
+        $(document).ready(function () {
+            var controller = new ScrollMagic.Controller();
+            var fix = document.getElementById("navright");
+
+            var scene = new ScrollMagic.Scene({
+                triggerElement: "#navright",
+                triggerHook: 0.2,
+
+            })
+                .addTo(controller)
+                .addIndicators() // add indicators (requires plugin)
+                .setPin("#navright")
+
+        })
+    </script>
 </body>
 
 </html>
